@@ -1,0 +1,16 @@
+version: '2'
+services:
+  jhipster6java11test-app:
+    image: jhipster6java11test
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://jhipster6java11test-postgresql:5432/jHipster6Java11Test
+      - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+    ports:
+      - 8080:8080
+  jhipster6java11test-postgresql:
+    extends:
+      file: postgresql.yml
+      service: jhipster6java11test-postgresql

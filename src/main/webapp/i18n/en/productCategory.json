@@ -1,0 +1,12 @@
+{
+  "jHipster6Java11TestApp": {
+    "ProductCategory": {
+      "null": "",
+      "Laptop": "Laptop",
+      "Desktop": "Desktop",
+      "Phone": "Phone",
+      "Tablet": "Tablet",
+      "Accessory": "Accessory"
+    }
+  }
+}
